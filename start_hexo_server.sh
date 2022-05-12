@@ -4,14 +4,16 @@ GIT_SSH_KEY=$3
 HEXO_SERVER_PORT=$4
 
 # check if there is already a mount volume
-if [ "$(ls -A /blog)"]; then
+if [[ "$(ls -A /blog)" ]]; then
     echo "Blog already exists, continuing"
 else
     echo "Start initialize blog"
     hexo init
-    npm install
     git clone https://github.com/fluid-dev/hexo-theme-fluid.git ./themes/fluid
 fi
+
+npm install
+npm install hexo-deployer-git --save
 
 # set up ssh key for deployment to github page
 echo "**Setting GIT_SSH_KEY as github ssh key**"

@@ -20,4 +20,4 @@ ENV HEXO_SERVER_PORT=4000
 EXPOSE ${HEXO_SERVER_PORT}
 
 # config git for deploy
-CMD bash /start_hexo_server.sh ${GIT_USERNAME} ${GIT_EMAIL} ${GIT_SSH_KEY} ${HEXO_SERVER_PORT}
+CMD bash /start_hexo_server.sh "${GIT_USERNAME}" "${GIT_EMAIL}" "${GIT_SSH_KEY}" "${HEXO_SERVER_PORT}"

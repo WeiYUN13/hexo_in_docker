@@ -19,10 +19,19 @@ docker run -it --name=blog \
   -e HEXO_SERVER_PORT=4000 \
   -e GIT_USER="WeiYUN13" \
   -e GIT_EMAIL="yunwei_ecpkn@buaa.edu.cn" \
-  -e GIT_SSH_KEY="cat ~/.ssh/id_rsa_blog" \
-  -v ~/Desktop/blog:/blog \
+  -e GIT_SSH_KEY="`cat ~/.ssh/id_rsa_blog`" \
+  -v ~/Desktop/yunwei/blog:/blog \
   -p 4000:4000 \
   hexo_in_docker
 ```
-
-
+Updating blog by running:
+```shell
+docker exec -it blog hexo g
+```
+Config deployment to github by:
+```yml
+deploy:
+  type: git
+  repo: git@github.com:weiyun13/weiyun13.github.io.git
+  branch: master
+```
