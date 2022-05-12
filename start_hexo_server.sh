@@ -10,6 +10,7 @@ else
     echo "Start initialize blog"
     hexo init
     git clone https://github.com/fluid-dev/hexo-theme-fluid.git ./themes/fluid
+    rm -rf ./themes/fluid/.git
 fi
 
 npm install

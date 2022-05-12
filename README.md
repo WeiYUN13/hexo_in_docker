@@ -28,6 +28,9 @@ Updating blog by running:
 ```shell
 docker exec -it blog hexo g
 ```
+Any other related hexo command could now run in docker container in an isolated enrironment.
+
+# Deploy to github page
 Config deployment to github by:
 ```yml
 deploy:
@@ -35,3 +38,6 @@ deploy:
   repo: git@github.com:weiyun13/weiyun13.github.io.git
   branch: master
 ```
+
+Another way to deploy automatically to github page is to use github CI and current docker
+hexo environment for generating static webside.
