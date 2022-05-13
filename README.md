@@ -38,6 +38,7 @@ deploy:
   repo: git@github.com:weiyun13/weiyun13.github.io.git
   branch: master
 ```
+Then run `docker exec -it blog hexo d -g`
 
 Another way to deploy automatically to github page is to use github CI and current docker
-hexo environment for generating static webside.
+hexo environment for generating static webside(TODO).
