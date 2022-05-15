@@ -20,6 +20,7 @@ docker run -it --name=blog \
   -e GIT_USER="WeiYUN13" \
   -e GIT_EMAIL="yunwei_ecpkn@buaa.edu.cn" \
   -e GIT_SSH_KEY="`cat ~/.ssh/id_rsa_blog`" \
+  -e DEPLOY_NOW="yes" \
   -v ~/Desktop/yunwei/blog:/blog \
   -p 4000:4000 \
   hexo_in_docker
