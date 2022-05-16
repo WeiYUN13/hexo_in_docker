@@ -17,7 +17,7 @@ From the image, creating a docker container by passing configurations to it:
 ```shell
 docker run -it --name=blog \
   -e HEXO_SERVER_PORT=4000 \
-  -e GIT_USER="WeiYUN13" \
+  -e GIT_USERNAME="WeiYUN13" \
   -e GIT_EMAIL="yunwei_ecpkn@buaa.edu.cn" \
   -e GIT_SSH_KEY="`cat ~/.ssh/id_rsa_blog`" \
   -e DEPLOY_NOW="yes" \
