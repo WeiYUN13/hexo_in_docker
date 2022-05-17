@@ -26,7 +26,7 @@ mkdir -p ~/.ssh && echo "${GIT_SSH_KEY}" > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 ssh-keyscan github.com > ~/.ssh/known_hosts 2>/dev/null
 
-if [[ "$DEPLOY_NOW" -eq "yes" ]]; then
+if [[ "$DEPLOY_NOW" == "yes" ]]; then
     echo "**deploy to github.io**"
     hexo d -g
 else
