@@ -20,7 +20,6 @@ docker run -it --name=blog \
   -e GIT_USERNAME="WeiYUN13" \
   -e GIT_EMAIL="yunwei_ecpkn@buaa.edu.cn" \
   -e GIT_SSH_KEY="`cat ~/.ssh/id_rsa_blog`" \
-  -e DEPLOY_NOW="yes" \
   -v ~/Desktop/yunwei/blog:/blog \
   -p 4000:4000 \
   hexo_in_docker
@@ -42,4 +41,4 @@ deploy:
 Then run `docker exec -it blog hexo d -g`
 
 Another way to deploy automatically to github page is to use github CI and current docker
-hexo environment for generating static webside(TODO).
+hexo environment for generating static webside. A general workflow for implemting a hexo & docker framwork for automatically deploy hexo blog by github CI, see [here](https://weiyun13.github.io/2022/05/15/%E4%BD%BF%E7%94%A8Github-Action%E5%92%8Cdocker%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/).
